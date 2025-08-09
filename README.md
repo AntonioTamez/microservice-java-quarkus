@@ -17,7 +17,6 @@ Un microservicio completo desarrollado con Java 17 y Quarkus para la gestión de
 - Java 17 o superior
 - Maven 3.8+
 - SQL Server (localhost:1433)
-- Usuario: `sa`, Contraseña: `Murcielago*`
 
 ## 🛠️ Instalación y Configuración
 
