@@ -1,0 +1,5 @@
+com\example\vehiculos\service\AuthServiceTest.class
+com\example\vehiculos\service\VehiculoServiceTest.class
+com\example\vehiculos\resource\VehiculoResourceTest.class
+com\example\vehiculos\resource\AuthResourceTest.class
+META-INF\panache-archive.marker

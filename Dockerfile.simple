@@ -1,0 +1,30 @@
+# Simple Dockerfile to run Quarkus application
+FROM openjdk:17-jdk-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy Maven wrapper and pom.xml
+COPY mvnw ./
+COPY .mvn ./.mvn/
+COPY pom.xml ./
+
+# Make mvnw executable
+RUN chmod +x mvnw
+
+# Copy source code
+COPY src ./src/
+
+# Build the application with offline mode to avoid network issues
+RUN ./mvnw clean package -DskipTests -Dquarkus.package.type=uber-jar
+
+# Expose port
+EXPOSE 8080
+
+# Set environment variables for database connection
+ENV QUARKUS_DATASOURCE_JDBC_URL=jdbc:sqlserver://host.docker.internal:1433;databaseName=vehiculos;trustServerCertificate=true
+ENV QUARKUS_DATASOURCE_USERNAME=sa
+ENV QUARKUS_DATASOURCE_PASSWORD=Murcielago*
+
+# Run the application
+CMD ["java", "-jar", "target/vehiculos-service-1.0.0-SNAPSHOT-runner.jar"]

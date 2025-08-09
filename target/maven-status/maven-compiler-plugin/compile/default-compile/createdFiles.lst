@@ -1,0 +1,11 @@
+com\example\vehiculos\dto\LoginRequest.class
+com\example\vehiculos\service\VehiculoService.class
+com\example\vehiculos\model\Combustible.class
+com\example\vehiculos\resource\AuthResource.class
+com\example\vehiculos\resource\VehiculoResource.class
+com\example\vehiculos\model\Usuario.class
+com\example\vehiculos\service\AuthService.class
+com\example\vehiculos\model\Transmision.class
+META-INF\panache-archive.marker
+com\example\vehiculos\dto\LoginResponse.class
+com\example\vehiculos\model\Vehiculo.class
