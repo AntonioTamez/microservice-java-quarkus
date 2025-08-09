@@ -29,7 +29,7 @@ cd vehiculos-service
 ### 2. Configurar SQL Server
 Asegúrate de tener SQL Server ejecutándose en `localhost:1433` con:
 - Usuario: `sa`
-- Contraseña: `Murcielago*`
+- Contraseña: `secret*`
 - La base de datos `vehiculos_db` se creará automáticamente
 
 ### 3. Ejecutar en modo desarrollo
@@ -221,7 +221,7 @@ mvn clean test
 # Base de datos
 quarkus.datasource.db-kind=mssql
 quarkus.datasource.username=sa
-quarkus.datasource.password=Murcielago*
+quarkus.datasource.password=secret*
 quarkus.datasource.jdbc.url=jdbc:sqlserver://localhost:1433;databaseName=vehiculos_db;trustServerCertificate=true
 
 # JWT
